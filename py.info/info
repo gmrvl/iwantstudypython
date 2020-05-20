@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+
+
+my_file = open('info.txt', 'w')
+ 
+text_for_file = 'Now u r going to read some info about Liika Gumerova - student of the 1st course of ITIS. IDK how to present yourself, but there should be some useful information. I want to study Python because I think that I can and I want. Why Python, not Ruby or PHP? Because I choose this lang when I pass an "EGE" exam and I supposed that I will continue to learn it later. So... now I have a chance (I suppose ahah) and I will try to do all that will need to enroll to Python course. PS. sorry 4 my eng, but... my level is A1)))))'
+my_file.write(text_for_file)
+my_file.close()
+
+exit = True
+print("Please, write INFO to get information about me")
+
+while (exit):
+	req = input()
+	if(req=="info" or req == "INFO"):
+	
+		f = open('info.txt')
+		line = f.readline()
+		while line:
+			print (line),
+			line = f.readline()
+		f.close()
+		print("Write EXIT to close")
+	
+	elif(req == "exit" or req=="EXIT"):
+		exit=False
+		break
+	
+	else :
+		print("No such command. Write EXIT to close")
+		
+	
+	
+	
+	
+	
+	
+    
+    
